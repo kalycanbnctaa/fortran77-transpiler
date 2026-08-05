@@ -1,0 +1,4 @@
+      PROGRAM HELLO
+      IMPLICIT NONE
+      PRINT *, 123
+      END

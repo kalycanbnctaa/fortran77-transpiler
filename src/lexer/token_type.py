@@ -1,0 +1,60 @@
+from __future__ import annotations
+
+from enum import Enum, auto
+
+class TokenType(Enum):
+    PROGRAM = auto()
+    END = auto()
+    SUBROUTINE = auto()
+    FUNCTION = auto()
+    RETURN = auto()
+    CALL = auto()
+    IMPLICIT = auto()
+    NONE = auto()
+    INTEGER = auto()
+    REAL = auto()
+    LOGICAL = auto()
+    CHARACTER = auto()
+    COMMON = auto()
+    DO = auto()
+    CONTINUE = auto()
+    IF = auto()
+    THEN = auto()
+    ELSE = auto()
+    ENDIF = auto()
+    GOTO = auto()
+    STOP = auto()
+    PRINT = auto()
+    READ = auto()
+
+    LABEL = auto()
+    IDENTIFIER = auto()
+    INT_LITERAL = auto()
+    REAL_LITERAL = auto()
+    CHARACTER_LITERAL = auto()
+
+    TRUE = auto()
+    FALSE = auto()
+    AND = auto()
+    OR = auto()
+    NOT = auto()
+
+    EQ = auto()
+    NE = auto()
+    LT = auto()
+    LE = auto()
+    GT = auto()
+    GE = auto()
+
+    PLUS = auto()
+    MINUS = auto()
+    STAR = auto()
+    SLASH = auto()
+    DSTAR = auto()
+    ASSIGN = auto()
+
+    LPAREN = auto()
+    RPAREN = auto()
+    COMMA = auto()
+
+    EOF = auto()

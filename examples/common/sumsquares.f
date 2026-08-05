@@ -1,0 +1,32 @@
+      PROGRAM SUMSQUARES
+      IMPLICIT NONE
+      INTEGER N, I
+
+      COMMON /ACC/ RUNTOTAL, CALLCNT
+      INTEGER RUNTOTAL, CALLCNT
+
+      RUNTOTAL = 0
+      CALLCNT = 0
+      N = 5
+
+      DO 10 I = 1, N
+          CALL ADDSQUARE(I)
+   10 CONTINUE
+
+      PRINT *, RUNTOTAL
+      PRINT *, CALLCNT
+      END
+
+
+      SUBROUTINE ADDSQUARE(VAL)
+      IMPLICIT NONE
+      INTEGER VAL
+
+      COMMON /ACC/ TOTAL, CNT
+      INTEGER TOTAL, CNT
+
+      TOTAL = TOTAL + VAL * VAL
+      CNT = CNT + 1
+
+      RETURN
+      END
