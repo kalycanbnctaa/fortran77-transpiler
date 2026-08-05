@@ -181,22 +181,22 @@ fortran77-transpiler/
 
 ```mermaid
 flowchart TD
-    A[Source Fortran (.f)] --> B[Fixed-Form Processor]
+    A["Source Fortran (.f)"] --> B["Fixed-Form Processor"]
     
-    B --> C[Lexer]
+    B --> C["Lexer"]
     
-    C --> D[Parser<br>Recursive Descent]
+    C --> D["Parser<br>Recursive Descent"]
     
-    D --> E[Semantic Analyzer]
+    D --> E["Semantic Analyzer"]
     
-    E --> F[Code Generator]
+    E --> F["Code Generator"]
     
-    F --> G[Output C (.c)]
+    F --> G["Output C (.c)"]
     
-    B -->|NormalizedLine<br><i>label, statement, source_line</i>| C
-    C -->|Token stream<br><i>keyword, identifier, literal, operator</i>| D
-    D -->|TranslationUnit<br><i>AST</i>| E
-    E -->|AST + SymbolTable<br><i>AST terdekorasi</i>| F
+    B -->|"NormalizedLine<br><i>label, statement, source_line</i>"| C
+    C -->|"Token stream<br><i>keyword, identifier, literal, operator</i>"| D
+    D -->|"TranslationUnit<br><i>AST</i>"| E
+    E -->|"AST + SymbolTable<br><i>AST terdekorasi</i>"| F
 ```
 
 Setiap tahap dapat diakses secara independen lewat CLI flag (`--tokens`, `--ast`, `--symbols`, `--emit`), sesuai requirement untuk menunjukkan keluaran intermediate tiap komponen.
